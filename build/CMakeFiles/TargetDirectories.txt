@@ -1,0 +1,4 @@
+D:/Informatics/Library/build/CMakeFiles/edit_cache.dir
+D:/Informatics/Library/build/CMakeFiles/library.dir
+D:/Informatics/Library/build/CMakeFiles/rebuild_cache.dir
+D:/Informatics/Library/build/CMakeFiles/test.dir

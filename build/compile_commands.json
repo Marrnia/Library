@@ -1,0 +1,17 @@
+[
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\library.dir\\main.cpp.obj -c D:\\Informatics\\Library\\main.cpp",
+  "file": "D:/Informatics/Library/main.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\library.dir\\src\\menu.cpp.obj -c D:\\Informatics\\Library\\src\\menu.cpp",
+  "file": "D:/Informatics/Library/src/menu.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/test.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\test.dir\\Tests\\main.cpp.obj -c D:\\Informatics\\Library\\Tests\\main.cpp",
+  "file": "D:/Informatics/Library/Tests/main.cpp"
+}
+]
