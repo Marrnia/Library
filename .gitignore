@@ -45,5 +45,5 @@
 *.txz
 
 ### vscode ###
-.vscode/*
+.vscode
 *.code-workspace
