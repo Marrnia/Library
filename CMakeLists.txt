@@ -10,7 +10,13 @@ include_directories("include"
                 "doctest")
 
 add_executable(library "main.cpp"
-                src/menu.cpp)
+                "src/menu.cpp"
+                "src/String.cpp")
 
 add_executable(test "Tests/main.cpp"
+                "doctest/doctest.h")
+
+add_executable(string "Tests/string.cpp"
+                "include/String.hpp"
+                "src/String.cpp"
                 "doctest/doctest.h")
