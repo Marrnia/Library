@@ -127,6 +127,10 @@ void String :: setString(const char* text) {
     copy_string(text);
 }
 
+char* String :: getString() const {
+    return data;
+}
+
 size_t String :: length() const {
     return size;
 }
