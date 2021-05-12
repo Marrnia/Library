@@ -32,6 +32,7 @@ namespace library {
         // Capacity
         bool empty() const;
         void setString(const char *);
+        char* getString() const;
         size_t length() const;
 
         // Operations
