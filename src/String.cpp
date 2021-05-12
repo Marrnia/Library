@@ -3,12 +3,10 @@ using namespace library;
 
 // Private
 
-size_t String :: strlen(const char* text) {
-    size_t n = 0;
-    while(text[n]) {
-        ++n;
-    }
-    return n;
+size_t String :: strlen(const char* str) {
+    const char *s;
+	for (s = str; *s; ++s);
+	return (s - str);
 }
 
 char* String :: create(const size_t& reserve) {
@@ -141,8 +139,8 @@ String String :: operator+(const String& rhs) const {
     for (size_t i = 0; i < size ; ++i) {
         buffer[i] = data[i];
     }
-    for (size_t i = size; i < result.size; ++i) {
-        buffer[i] = rhs.data[i];
+    for (size_t i = size, j = 0; i < result.size && j < rhs.size; ++i, ++j) {
+        buffer[i] = rhs.data[j];
     }
     buffer[result.size] = '\0';
     result.data = buffer;
@@ -157,8 +155,8 @@ String String :: operator+(const char* rhs) const {
     for (size_t i = 0; i < size ; ++i) {
         buffer[i] = data[i];
     }
-    for (size_t i = size; i < result.size; ++i) {
-        buffer[i] = rhs[i];
+    for (size_t i = size, j = 0; i < result.size && j < strlen(rhs); ++i, ++j) {
+        buffer[i] = rhs[j];
     }
     buffer[result.size] = '\0';
     result.data = buffer;
@@ -253,6 +251,10 @@ void String :: insert(const char& element, const size_t& position) {
 }
 
 void String :: swap(String& lhs, String& rhs) {
+    if (lhs.data == nullptr || rhs.data == nullptr) {
+        std::cerr << "swap is imposible with nullptr\n";
+        return;
+    }
     String temp = lhs;
     lhs = rhs;
     rhs = temp;
@@ -263,38 +265,41 @@ String String :: substr(const size_t& from, const size_t& to) const {
         throw std::out_of_range("index out of bound");
     }
     String result;
-    result.size = to - from;
-    for (size_t i = 0, j = from; i < result.size && j < to; ++i, ++j) {
-        result.data[i] = data[j];
+    result.size = to - from + 1;
+    char* buffer = create(result.size);
+    for (size_t i = 0, j = from; i < result.size && j <= to; ++i, ++j) {
+        buffer[i] = data[j];
     }
+    buffer[result.size] = '\0';
+    result.data = buffer;
     return result;
 }
 
-size_t String :: find(const String& find) {
+int String :: find(const String& find) {
     if (find.size > size) {
         return -1;
     }
-    for (size_t i = 0; i < (size - find.size); ++i) {
-        if (find == substr(i,i+find.size)) {
+    for (size_t i = 0; i < (size - find.size + 1); ++i) {
+        if (find == substr(i,i+find.size-1)) {
             return i;
         }
     }
     return -1;
 }
-size_t String :: find(const char* find) {
+int String :: find(const char* find) {
     size_t find_size = strlen(find);
     if (find_size > size) {
         return -1;
     }
-    for (size_t i = 0; i < (size - find_size); ++i) {
-        if (find == substr(i, i + find_size)) {
+    for (size_t i = 0; i < (size - find_size + 1); ++i) {
+        if (find == substr(i, i + find_size - 1)) {
             return i;
         }
     }
     return -1;
 }
 
-size_t String :: find(const char& find) {
+int String :: find(const char& find) {
     if (size == 0) {
         return -1;
     }
