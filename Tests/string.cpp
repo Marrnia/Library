@@ -96,3 +96,9 @@ TEST_CASE("Search") {
     String s2 = "te";
     CHECK(s.find(s2) == 0);
 }
+
+TEST_CASE("Input && Output") {
+    String s;
+    std::cin >> s;
+    std::cout << s << '\n';
+}
