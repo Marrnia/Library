@@ -1,13 +1,8 @@
 #include <iostream>
-using std::cout;
+#include "menu.hpp"
 
 int main() {
-    
-    cout << "<command>";
-    cout.width(23);
-    cout << "<123>\n";
-    cout << "<command>";
-    cout.width(23);
-    cout << "123\n";
+    std::cout << "LIBRARY:\n";
+    Menu();
     return 0;
 }
