@@ -43,8 +43,8 @@ namespace library {
             size_t s = String::strlen(lhs) + rhs.size;
             result = String::create(s + 1);
             strcpy_s(result, String::strlen(lhs) + 1, lhs);
-            for (size_t i = strlen(lhs); i < s; ++i) {
-                result[i] = rhs.data[i];
+            for (size_t i = strlen(lhs), j = 0; i < s && j < rhs.size; ++i, ++j) {
+                result[i] = rhs.data[j];
             }
             result[s] = '\0';
             return result;
@@ -54,8 +54,8 @@ namespace library {
             size_t s = 1 + rhs.size;
             result = String::create(s + 1);
             result[0] = lhs;
-            for (size_t i = 1; i < s; ++i) {
-                result[i] = rhs.data[i];
+            for (size_t i = 1, j = 0; i < s && j < s-1; ++i, ++j) {
+                result[i] = rhs.data[j];
             }
             result[s] = '\0';
             return result;
@@ -101,14 +101,18 @@ namespace library {
         String substr(const size_t&, const size_t&) const; // from, to
 
         //Search
-        size_t find(const String&);
-        size_t find(const char*);
-        size_t find(const char&);
+        int find(const String&);
+        int find(const char*);
+        int find(const char&);
 
         // IO
         friend std::ostream &operator<<(std::ostream &out, const String &object)
         {
-            out << object.data;
+            if (object.data != nullptr)
+                out << object.data;
+            else {
+                out << "nullptr";
+            }
             return out;
         }
 
