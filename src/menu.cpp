@@ -1,7 +1,8 @@
 #include "menu.hpp"
 
 Menu :: Menu() {
-    logged = false;
+    LibraryCommands();
+    Administrator();
     choice();
 }
 
@@ -12,27 +13,29 @@ void Menu :: choice() {
     }
     else if (command == "open") { //////////////
         std::cin >> command;
-        if (CommandLine::open(command) == SUCCESS) {
+        State condition = CommandLine::open(command);
+        if (condition == SUCCESS) {
             file_name = command;
             std::cout << "Successfully opened " << command << '\n';
         }
-        else if (CommandLine::open(command) == FAIL) {
+        else if (condition == FAIL) {
             std::cout << "Failed to opened the given file.\n";
         }
-        else if (CommandLine::open(command) == WRONGTYPE) {
+        else if (condition == WRONGTYPE) {
             std::cout << "Wrong type of the file.\n";
         }
-        else if (CommandLine::open(command) == OPENED) {
+        else if (condition == OPENED) {
             std::cout << "Already a file is opened.\n";
         }
     }
     else if (command == "close") { //////////////////////
-        if (CommandLine :: close() == SUCCESS) {
+        State condition = CommandLine::close();
+        if (condition == SUCCESS) {
             std::cout << "Successfuly closed " << file_name; 
-        } else if (CommandLine :: close() == FAIL) {
+        } else if (condition == FAIL) {
             std::cout << "Cannot close the file.\n";
         }
-        else if (CommandLine::close() == NOTOPEN) {
+        else if (condition == NOTOPEN) {
             std::cout << "There is no opened file.\n";
         }
     }
@@ -41,30 +44,52 @@ void Menu :: choice() {
         return;
     }
     else if (command == "save") { ////////////////
-        if (CommandLine::save(file_name) == SUCCESS) {
+        State condition = CommandLine::save(file_name);
+        if (condition == SUCCESS) {
             std::cout << "Successfulyy saved " << file_name << '\n';
         }
-        else if (CommandLine::save(file_name) == FAIL) {
+        else if (condition == FAIL) {
             std::cout << "Failed at saving the file.\n";
         }
-        else if (CommandLine::save(file_name) == NOTOPEN) {
+        else if (condition == NOTOPEN) {
             std::cout << "The file is not opened.\n";
         }
     }
     else if (command == "saveas") { ///////////////
         std::cin >> command;
-        if (CommandLine::saveAs(command) == SUCCESS) {
+        State condition = CommandLine::saveAs(command);
+        if (condition == SUCCESS) {
             std::cout << "Successfully saved " << command << '\n';
         }
-        else if (CommandLine::saveAs(command) == FAIL) {
+        else if (condition == FAIL) {
             std::cout << "Failed at saving " << command << '\n';
         }
-        else if (CommandLine::saveAs(command) == NOTOPEN) {
+        else if (condition == NOTOPEN) {
             std::cout << "The file is not opened.\n";
         }
     }
     else if (command == "login") { ///////////////
-        LibraryCommands::login();
+        State condition = LibraryCommands::login();
+        if (condition == SUCCESS) {
+        }
+        else if (condition == NOTLOGGED) {
+            std::cout << "You are already logged in!\n";
+        }
+        else if (condition == FAIL) {
+            std::cout << "Unable to open the file Users.txt\n";
+        }
+        else if (condition == NOTMATCH) {
+            std::cout << "Wrong username or password!\n";
+        }
+    }
+    else if (command == "logout") {
+        State condition = LibraryCommands::logout();
+        if (condition == SUCCESS) {
+            std::cout << "Successfully logout!\n";
+        }
+        else if (condition == NOTLOGGED) {
+            std::cout << "You are not logged in!\n";
+        }
     }
     else {
         std::cerr << "Invalid command!\n";
