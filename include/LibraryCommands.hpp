@@ -17,8 +17,8 @@ public:
     static void books_info();
     static void books_find();
     static void books_sort();
-    static void users_add();
-    static void users_remove();
+    static State users_add();
+    static State users_remove();
 
     LibraryCommands();
 };

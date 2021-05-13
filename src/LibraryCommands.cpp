@@ -47,3 +47,20 @@ State LibraryCommands :: logout() {
     }
     return NOTLOGGED;
 }
+
+State LibraryCommands :: users_add() {
+    library::String user;
+    std::cin >> user;
+    library::String pass;
+    std::cin >> pass;
+    std::ofstream write;
+    write.open("Users.txt");
+    if (write) {
+        write << user;
+        write << '\n';
+        write << pass;
+        write.close();
+        return SUCCESS;
+    }
+    else return FAIL;
+}
