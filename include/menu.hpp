@@ -4,6 +4,7 @@
 #include "CommandLine.hpp"
 #include "State.hpp"
 #include "LibraryCommands.hpp"
+#include "Administrator.hpp"
 
 class Menu {
 private:
