@@ -37,7 +37,6 @@ State CommandLine :: open(library::String& file_name) {
 	}
 	in.open(file_name.getString());
 	if (in) {
-		//in.getline(buffer, size);
 		in.seekg(0, std::ios::end);
 		size = in.tellg();
 		in.seekg(0, std::ios::beg);
