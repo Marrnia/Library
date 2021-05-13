@@ -17,7 +17,8 @@ add_executable(library "main.cpp"
                 "src/String.cpp"
                 "src/User.cpp"
                 "src/Administrator.cpp"
-                "src/CommandLine.cpp")
+                "src/CommandLine.cpp"
+                "src/LibraryCommands.cpp")
 
 add_executable(test "Tests/main.cpp"
                 "doctest/doctest.h")
