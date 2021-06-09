@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <String.hpp>
 
 /*TO DO: 
 1) Iterators
@@ -28,7 +29,19 @@ namespace library {
 		Vector(const Vector<value_type>&); // Copy constructor
 		Vector(const value_type*, const size_type&);
 		~Vector();
-		//Vector<value_type>& operator=(const Vector<value_type>&);
+		Vector<value_type>& operator=(const Vector<value_type>&);
+
+		// Iterators
+
+		class iterator;
+
+		iterator begin();
+
+		const iterator begin() const;
+
+		iterator end();
+
+		const iterator end() const;
 	
 		// capacity
 		bool empty() const;
@@ -138,7 +151,7 @@ namespace library {
 	// Public
 	
 	template <typename T>
-	Vector<T> :: Vector () : size{0}, capacity{1}, data{nullptr} {
+	Vector<T> :: Vector () : size{0}, capacity{8}, data{nullptr} {
 		try	{
 			data = new value_type[capacity];
 		}
@@ -149,7 +162,7 @@ namespace library {
 	}
 	
 	template <typename T>
-	Vector<T> :: Vector (const size_t& size, const value_type& value) : size{size}, capacity{size} {
+	Vector<T> :: Vector (const size_t& size, const value_type& value) : size{size}, capacity{size+1} {
 		value_type* buffer = nullptr;
 		try {
 			buffer = new value_type[capacity];
@@ -191,14 +204,70 @@ namespace library {
 		capacity = 0;
 		size = 0;
 	}
+
+	// Iterators
+
+	template<class T>
+	class Vector<T>::iterator {
+	public:
+		iterator(T* p) : current(p)
+		{}
+
+		iterator& operator++() {
+			++current;
+			return *this;
+		}
+
+		iterator& operator--() {
+			--current;
+			return *this;
+		}
+
+		T& operator*() {
+			return *current;
+		}
+
+		bool operator==(const iterator& b) const {
+			return *current == *b.current;
+		}
+
+		bool operator!=(const iterator& b) const {
+			return *current != *b.current;
+		}
+
+	private:
+		T* current;
+	};
 	
-	/*template <typename T>
+	template<typename T>
+	typename Vector<T>::iterator Vector<T>::begin() {	
+		return Vector<T>::iterator(&data[0]);
+	}
+
+	template<typename T>
+	const typename Vector<T>::iterator Vector<T>::begin() const {
+		return Vector<T>::iterator(&data[0]);
+	}
+
+	template<typename T>
+	typename Vector<T>::iterator Vector<T>::end() {
+		return Vector<T>::iterator(&data[size]);
+	}
+
+	template<class T>
+	const typename Vector<T>::iterator Vector<T>::end() const {
+		return Vector<T>::iterator(&data[size]);
+	}
+
+	// End of iterators
+
+	template <typename T>
 	Vector<typename Vector<T>::value_type>& Vector<T> :: operator=(const Vector<value_type>& rhs) {
 		if (this != &rhs) {
 			copy(*this, rhs);
 		}
 		return *this;
-	}*/
+	}
 	
 	template <typename T>
 	bool Vector<T> :: empty() const {
@@ -325,16 +394,16 @@ namespace library {
 		return false;
 	}
 	
-	template <typename T>
+	/*template <typename T>
 	bool Vector<T> :: operator < (const Vector<value_type> &rhs) const {
 		size_type ub = size < rhs.size ? size : rhs.size;
 		for (size_type i = 0; i < ub; ++i)
 			if (data[i] != rhs.data[i])
 				return data[i] < rhs.data[i];
 		return size < rhs.size;
-	}
+	}*/
 	
-	template <typename T>
+	/*template <typename T>
 	bool Vector<T> :: operator <= (const Vector<value_type> &rhs) const {
 		size_type ub = size < rhs.size ? size : rhs.size;
 		for (size_type i = 0; i < ub; ++i)
@@ -359,7 +428,7 @@ namespace library {
 			if (data[i] != rhs.data[i])
 				return data[i] > rhs.data[i];
 		return size >= rhs.size;
-	}
+	}*/
 	
 	template <typename T>
 	void Vector<T> :: swap (Vector<value_type>& lhs, Vector<value_type>& rhs) {
