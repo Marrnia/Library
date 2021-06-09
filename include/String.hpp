@@ -12,6 +12,7 @@ namespace library {
         void copy_string(const char*);
         void copy_element(const char&);
         void erase();
+
     public:
         String(); // Default constructor
         String(const char&); // char constructor
@@ -32,8 +33,8 @@ namespace library {
         // Capacity
         bool empty() const;
         void setString(const char *);
-        char* getString() const;
-        size_t length() const;
+        const char* getString() const;
+        const size_t length() const;
 
         // Operations
         String operator+(const String &) const;
@@ -50,6 +51,7 @@ namespace library {
             result[s] = '\0';
             return result;
         }
+
         friend char* operator+(const char& lhs, const String& rhs) {
             char* result = nullptr;
             size_t s = 1 + rhs.size;
@@ -100,11 +102,16 @@ namespace library {
         void insert(const char&, const size_t&);
         static void swap(String&, String&);
         String substr(const size_t&, const size_t&) const; // from, to
+        void toLower() noexcept;
+        void toUpper() noexcept;
+        void removeElement(const size_t&);
+        void removeSpaces();
 
         //Search
         int find(const String&);
         int find(const char*);
         int find(const char&);
+        size_t find(const char&, const size_t&, const size_t&) const;
 
         // IO
         friend std::ostream &operator<<(std::ostream &out, const String &object)
@@ -119,8 +126,16 @@ namespace library {
 
         friend std::istream &operator>>(std::istream &in, String &object)
         {
-            char *buffer = new char[1000];
-            in >> buffer;
+            char *buffer = nullptr;
+            try
+            {
+                buffer = new char[1000];
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << e.what() << '\n';
+            }
+            in.get(buffer, 1000);
             object = String{buffer};
             delete[] buffer;
             return in;

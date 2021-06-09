@@ -127,11 +127,11 @@ void String :: setString(const char* text) {
     copy_string(text);
 }
 
-char* String :: getString() const {
+const char* String :: getString() const {
     return data;
 }
 
-size_t String :: length() const {
+const size_t String :: length() const {
     return size;
 }
 
@@ -264,6 +264,23 @@ void String :: swap(String& lhs, String& rhs) {
     rhs = temp;
 }
 
+size_t String :: find (const char& element,const size_t& from, const size_t& to) const {
+    try {
+        if (from > size || to > size || from > to) {
+            throw std::out_of_range("index out of bound");
+        }
+    }
+    catch(const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
+    for (size_t i = from; i < to; ++i) {
+            if (element == data[i]) {
+                return i;
+            }
+        }
+    return -1;
+}
+
 String String :: substr(const size_t& from, const size_t& to) const {
     if (from > size || to > size || from > to) {
         throw std::out_of_range("index out of bound");
@@ -277,6 +294,49 @@ String String :: substr(const size_t& from, const size_t& to) const {
     buffer[result.size] = '\0';
     result.data = buffer;
     return result;
+}
+
+void String :: toLower() noexcept{
+    for (size_t i = 0; i < size; ++i) {
+        if (data[i] >= 'A' && data[i] <= 'Z') {
+            data[i] = data[i] + ('a'-'A');
+        }
+    }
+}
+
+void String :: toUpper() noexcept {
+    for (size_t i = 0; i < size; ++i) {
+        if (data[i] >= 'a' && data[i] <= 'z') {
+            data[i] = data[i] - ('a'-'A');
+        }
+    }
+}
+
+void String :: removeElement(const size_t& index) {
+    if (index >= size) throw std::invalid_argument("Removing index is out of range of the array!");
+    for (size_t i = index; i < size; ++i) {
+        data[i] = data[i+1];
+    }
+    if (size > 0)
+        --size;
+}
+
+void String :: removeSpaces() {
+    size_t index = 0;
+    while (index < size) {
+        if (data[0] == ' ') {
+            removeElement(0);
+        }
+        else if (data[index] == ' ' && data[index+1] == ' ') {
+            removeElement(index);
+        }
+        else ++index;
+    }
+
+    if (data[size-1] == ' ') {
+        size_t lastIndex = size - 1;
+        removeElement(lastIndex);
+    }
 }
 
 int String :: find(const String& find) {
