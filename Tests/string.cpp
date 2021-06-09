@@ -23,7 +23,8 @@ TEST_CASE("Constructors") {
 
 TEST_CASE("Assignment") {
     std::cout << "Assignment:\n";
-    String s1 = "text";
+    String s1("text");
+    std::cout << s1 << std::endl;
     String s2 = s1;
     String s3 = 'a';
     CHECK(s1.length() == 4);
