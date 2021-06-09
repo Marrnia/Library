@@ -5,6 +5,10 @@
 #include "State.hpp"
 #include "LibraryCommands.hpp"
 #include "Administrator.hpp"
+#include "Vector.hpp"
+#include "vector_strings.hpp"
+
+using namespace library;
 
 class Menu {
 private:
