@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <conio.h>
 
 namespace library {
     class String {
@@ -126,7 +127,7 @@ namespace library {
 
         friend std::istream &operator>>(std::istream &in, String &object)
         {
-            char *buffer = nullptr;
+            /*char *buffer = nullptr;
             try
             {
                 buffer = new char[1000];
@@ -135,10 +136,53 @@ namespace library {
             {
                 std::cerr << e.what() << '\n';
             }
+            in.clear();
             in.get(buffer, 1000);
             object = String{buffer};
             delete[] buffer;
+            return in;*/
+
+            char ch;
+            char *buffer;
+            try
+            {
+                buffer = new char[1000];
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << e.what() << '\n';
+            }
+            
+            const char BACKSPACE = 8;
+            const char RETURN = 13;
+            int i = 0;
+
+            while (ch != RETURN)
+            {
+                if (i == 1000)
+                {
+                    throw("Buffer overflow!");
+                }
+                ch = getch();
+                if (ch != RETURN && ch != BACKSPACE)
+                {
+                    std::cout << ch;
+                    buffer[i] = ch;
+                    ++i;
+                }
+                if (ch == BACKSPACE && i > 0)
+                {
+                    --i;
+                    std::cout << "\b \b";
+                    continue;
+                }
+            }
+            buffer[i] = '\0';
+            object = String{buffer};
+            delete[] buffer;
+            std::cout << '\n';
             return in;
+
         }
 
     };
