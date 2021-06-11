@@ -1,17 +1,87 @@
 [
 {
   "directory": "D:/Informatics/Library/build",
-  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\library.dir\\main.cpp.obj -c D:\\Informatics\\Library\\main.cpp",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/string.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\string.dir\\Tests\\string.cpp.obj -c D:\\Informatics\\Library\\Tests\\string.cpp",
+  "file": "D:/Informatics/Library/Tests/string.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/string.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\string.dir\\src\\String.cpp.obj -c D:\\Informatics\\Library\\src\\String.cpp",
+  "file": "D:/Informatics/Library/src/String.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\main.cpp.obj -c D:\\Informatics\\Library\\main.cpp",
   "file": "D:/Informatics/Library/main.cpp"
 },
 {
   "directory": "D:/Informatics/Library/build",
-  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\library.dir\\src\\menu.cpp.obj -c D:\\Informatics\\Library\\src\\menu.cpp",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\menu.cpp.obj -c D:\\Informatics\\Library\\src\\menu.cpp",
   "file": "D:/Informatics/Library/src/menu.cpp"
 },
 {
   "directory": "D:/Informatics/Library/build",
-  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/test.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\test.dir\\Tests\\main.cpp.obj -c D:\\Informatics\\Library\\Tests\\main.cpp",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\String.cpp.obj -c D:\\Informatics\\Library\\src\\String.cpp",
+  "file": "D:/Informatics/Library/src/String.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\User.cpp.obj -c D:\\Informatics\\Library\\src\\User.cpp",
+  "file": "D:/Informatics/Library/src/User.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\CommandLine.cpp.obj -c D:\\Informatics\\Library\\src\\CommandLine.cpp",
+  "file": "D:/Informatics/Library/src/CommandLine.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\UserDatabase.cpp.obj -c D:\\Informatics\\Library\\src\\UserDatabase.cpp",
+  "file": "D:/Informatics/Library/src/UserDatabase.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\BookDatabase.cpp.obj -c D:\\Informatics\\Library\\src\\BookDatabase.cpp",
+  "file": "D:/Informatics/Library/src/BookDatabase.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\SearchBooks.cpp.obj -c D:\\Informatics\\Library\\src\\SearchBooks.cpp",
+  "file": "D:/Informatics/Library/src/SearchBooks.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\SortBooks.cpp.obj -c D:\\Informatics\\Library\\src\\SortBooks.cpp",
+  "file": "D:/Informatics/Library/src/SortBooks.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\Book.cpp.obj -c D:\\Informatics\\Library\\src\\Book.cpp",
+  "file": "D:/Informatics/Library/src/Book.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\UserFiles.cpp.obj -c D:\\Informatics\\Library\\src\\UserFiles.cpp",
+  "file": "D:/Informatics/Library/src/UserFiles.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/library.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\library.dir\\src\\BookFiles.cpp.obj -c D:\\Informatics\\Library\\src\\BookFiles.cpp",
+  "file": "D:/Informatics/Library/src/BookFiles.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/test.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\test.dir\\Tests\\main.cpp.obj -c D:\\Informatics\\Library\\Tests\\main.cpp",
   "file": "D:/Informatics/Library/Tests/main.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/vector_string.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\vector_string.dir\\Tests\\vector_strings.cpp.obj -c D:\\Informatics\\Library\\Tests\\vector_strings.cpp",
+  "file": "D:/Informatics/Library/Tests/vector_strings.cpp"
+},
+{
+  "directory": "D:/Informatics/Library/build",
+  "command": "D:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/vector_string.dir/includes_CXX.rsp -g -Werror=return-type -Werror=format -std=gnu++11 -o CMakeFiles\\vector_string.dir\\src\\String.cpp.obj -c D:\\Informatics\\Library\\src\\String.cpp",
+  "file": "D:/Informatics/Library/src/String.cpp"
 }
 ]

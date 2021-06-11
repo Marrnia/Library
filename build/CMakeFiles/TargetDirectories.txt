@@ -1,4 +1,6 @@
 D:/Informatics/Library/build/CMakeFiles/edit_cache.dir
+D:/Informatics/Library/build/CMakeFiles/string.dir
 D:/Informatics/Library/build/CMakeFiles/library.dir
 D:/Informatics/Library/build/CMakeFiles/rebuild_cache.dir
 D:/Informatics/Library/build/CMakeFiles/test.dir
+D:/Informatics/Library/build/CMakeFiles/vector_string.dir

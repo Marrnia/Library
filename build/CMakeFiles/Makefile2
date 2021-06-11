@@ -62,8 +62,10 @@ CMAKE_BINARY_DIR = D:\Informatics\Library\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/string.dir/all
 all: CMakeFiles/library.dir/all
 all: CMakeFiles/test.dir/all
+all: CMakeFiles/vector_string.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,9 +73,37 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/string.dir/clean
 clean: CMakeFiles/library.dir/clean
 clean: CMakeFiles/test.dir/clean
+clean: CMakeFiles/vector_string.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/string.dir
+
+# All Build rule for target.
+CMakeFiles/string.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=14,15,16 "Built target string"
+.PHONY : CMakeFiles/string.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/string.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Informatics\Library\build\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/string.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Informatics\Library\build\CMakeFiles 0
+.PHONY : CMakeFiles/string.dir/rule
+
+# Convenience name for target.
+string: CMakeFiles/string.dir/rule
+.PHONY : string
+
+# clean rule for target.
+CMakeFiles/string.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/clean
+.PHONY : CMakeFiles/string.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/library.dir
@@ -82,12 +112,12 @@ clean: CMakeFiles/test.dir/clean
 CMakeFiles/library.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=1,2,3 "Built target library"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target library"
 .PHONY : CMakeFiles/library.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Informatics\Library\build\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Informatics\Library\build\CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Informatics\Library\build\CMakeFiles 0
 .PHONY : CMakeFiles/library.dir/rule
@@ -108,7 +138,7 @@ CMakeFiles/library.dir/clean:
 CMakeFiles/test.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=4,5 "Built target test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=17,18 "Built target test"
 .PHONY : CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -126,6 +156,32 @@ test: CMakeFiles/test.dir/rule
 CMakeFiles/test.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/clean
 .PHONY : CMakeFiles/test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/vector_string.dir
+
+# All Build rule for target.
+CMakeFiles/vector_string.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=19,20,21 "Built target vector_string"
+.PHONY : CMakeFiles/vector_string.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/vector_string.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Informatics\Library\build\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/vector_string.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Informatics\Library\build\CMakeFiles 0
+.PHONY : CMakeFiles/vector_string.dir/rule
+
+# Convenience name for target.
+vector_string: CMakeFiles/vector_string.dir/rule
+.PHONY : vector_string
+
+# clean rule for target.
+CMakeFiles/vector_string.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/clean
+.PHONY : CMakeFiles/vector_string.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

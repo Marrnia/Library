@@ -98,21 +98,191 @@ CMakeFiles/library.dir/src/menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/menu.cpp.s"
 	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\menu.cpp -o CMakeFiles\library.dir\src\menu.cpp.s
 
+CMakeFiles/library.dir/src/String.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/String.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/String.cpp.obj: ../src/String.cpp
+CMakeFiles/library.dir/src/String.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/library.dir/src/String.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/String.cpp.obj -MF CMakeFiles\library.dir\src\String.cpp.obj.d -o CMakeFiles\library.dir\src\String.cpp.obj -c D:\Informatics\Library\src\String.cpp
+
+CMakeFiles/library.dir/src/String.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/String.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\String.cpp > CMakeFiles\library.dir\src\String.cpp.i
+
+CMakeFiles/library.dir/src/String.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/String.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\String.cpp -o CMakeFiles\library.dir\src\String.cpp.s
+
+CMakeFiles/library.dir/src/User.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/User.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/User.cpp.obj: ../src/User.cpp
+CMakeFiles/library.dir/src/User.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/library.dir/src/User.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/User.cpp.obj -MF CMakeFiles\library.dir\src\User.cpp.obj.d -o CMakeFiles\library.dir\src\User.cpp.obj -c D:\Informatics\Library\src\User.cpp
+
+CMakeFiles/library.dir/src/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/User.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\User.cpp > CMakeFiles\library.dir\src\User.cpp.i
+
+CMakeFiles/library.dir/src/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/User.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\User.cpp -o CMakeFiles\library.dir\src\User.cpp.s
+
+CMakeFiles/library.dir/src/CommandLine.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/CommandLine.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/CommandLine.cpp.obj: ../src/CommandLine.cpp
+CMakeFiles/library.dir/src/CommandLine.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/library.dir/src/CommandLine.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/CommandLine.cpp.obj -MF CMakeFiles\library.dir\src\CommandLine.cpp.obj.d -o CMakeFiles\library.dir\src\CommandLine.cpp.obj -c D:\Informatics\Library\src\CommandLine.cpp
+
+CMakeFiles/library.dir/src/CommandLine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/CommandLine.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\CommandLine.cpp > CMakeFiles\library.dir\src\CommandLine.cpp.i
+
+CMakeFiles/library.dir/src/CommandLine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/CommandLine.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\CommandLine.cpp -o CMakeFiles\library.dir\src\CommandLine.cpp.s
+
+CMakeFiles/library.dir/src/UserDatabase.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/UserDatabase.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/UserDatabase.cpp.obj: ../src/UserDatabase.cpp
+CMakeFiles/library.dir/src/UserDatabase.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/library.dir/src/UserDatabase.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/UserDatabase.cpp.obj -MF CMakeFiles\library.dir\src\UserDatabase.cpp.obj.d -o CMakeFiles\library.dir\src\UserDatabase.cpp.obj -c D:\Informatics\Library\src\UserDatabase.cpp
+
+CMakeFiles/library.dir/src/UserDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/UserDatabase.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\UserDatabase.cpp > CMakeFiles\library.dir\src\UserDatabase.cpp.i
+
+CMakeFiles/library.dir/src/UserDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/UserDatabase.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\UserDatabase.cpp -o CMakeFiles\library.dir\src\UserDatabase.cpp.s
+
+CMakeFiles/library.dir/src/BookDatabase.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/BookDatabase.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/BookDatabase.cpp.obj: ../src/BookDatabase.cpp
+CMakeFiles/library.dir/src/BookDatabase.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/library.dir/src/BookDatabase.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/BookDatabase.cpp.obj -MF CMakeFiles\library.dir\src\BookDatabase.cpp.obj.d -o CMakeFiles\library.dir\src\BookDatabase.cpp.obj -c D:\Informatics\Library\src\BookDatabase.cpp
+
+CMakeFiles/library.dir/src/BookDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/BookDatabase.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\BookDatabase.cpp > CMakeFiles\library.dir\src\BookDatabase.cpp.i
+
+CMakeFiles/library.dir/src/BookDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/BookDatabase.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\BookDatabase.cpp -o CMakeFiles\library.dir\src\BookDatabase.cpp.s
+
+CMakeFiles/library.dir/src/SearchBooks.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/SearchBooks.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/SearchBooks.cpp.obj: ../src/SearchBooks.cpp
+CMakeFiles/library.dir/src/SearchBooks.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/library.dir/src/SearchBooks.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/SearchBooks.cpp.obj -MF CMakeFiles\library.dir\src\SearchBooks.cpp.obj.d -o CMakeFiles\library.dir\src\SearchBooks.cpp.obj -c D:\Informatics\Library\src\SearchBooks.cpp
+
+CMakeFiles/library.dir/src/SearchBooks.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/SearchBooks.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\SearchBooks.cpp > CMakeFiles\library.dir\src\SearchBooks.cpp.i
+
+CMakeFiles/library.dir/src/SearchBooks.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/SearchBooks.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\SearchBooks.cpp -o CMakeFiles\library.dir\src\SearchBooks.cpp.s
+
+CMakeFiles/library.dir/src/SortBooks.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/SortBooks.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/SortBooks.cpp.obj: ../src/SortBooks.cpp
+CMakeFiles/library.dir/src/SortBooks.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/library.dir/src/SortBooks.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/SortBooks.cpp.obj -MF CMakeFiles\library.dir\src\SortBooks.cpp.obj.d -o CMakeFiles\library.dir\src\SortBooks.cpp.obj -c D:\Informatics\Library\src\SortBooks.cpp
+
+CMakeFiles/library.dir/src/SortBooks.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/SortBooks.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\SortBooks.cpp > CMakeFiles\library.dir\src\SortBooks.cpp.i
+
+CMakeFiles/library.dir/src/SortBooks.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/SortBooks.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\SortBooks.cpp -o CMakeFiles\library.dir\src\SortBooks.cpp.s
+
+CMakeFiles/library.dir/src/Book.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/Book.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/Book.cpp.obj: ../src/Book.cpp
+CMakeFiles/library.dir/src/Book.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/library.dir/src/Book.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/Book.cpp.obj -MF CMakeFiles\library.dir\src\Book.cpp.obj.d -o CMakeFiles\library.dir\src\Book.cpp.obj -c D:\Informatics\Library\src\Book.cpp
+
+CMakeFiles/library.dir/src/Book.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/Book.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\Book.cpp > CMakeFiles\library.dir\src\Book.cpp.i
+
+CMakeFiles/library.dir/src/Book.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/Book.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\Book.cpp -o CMakeFiles\library.dir\src\Book.cpp.s
+
+CMakeFiles/library.dir/src/UserFiles.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/UserFiles.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/UserFiles.cpp.obj: ../src/UserFiles.cpp
+CMakeFiles/library.dir/src/UserFiles.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/library.dir/src/UserFiles.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/UserFiles.cpp.obj -MF CMakeFiles\library.dir\src\UserFiles.cpp.obj.d -o CMakeFiles\library.dir\src\UserFiles.cpp.obj -c D:\Informatics\Library\src\UserFiles.cpp
+
+CMakeFiles/library.dir/src/UserFiles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/UserFiles.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\UserFiles.cpp > CMakeFiles\library.dir\src\UserFiles.cpp.i
+
+CMakeFiles/library.dir/src/UserFiles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/UserFiles.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\UserFiles.cpp -o CMakeFiles\library.dir\src\UserFiles.cpp.s
+
+CMakeFiles/library.dir/src/BookFiles.cpp.obj: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/BookFiles.cpp.obj: CMakeFiles/library.dir/includes_CXX.rsp
+CMakeFiles/library.dir/src/BookFiles.cpp.obj: ../src/BookFiles.cpp
+CMakeFiles/library.dir/src/BookFiles.cpp.obj: CMakeFiles/library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/library.dir/src/BookFiles.cpp.obj"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/library.dir/src/BookFiles.cpp.obj -MF CMakeFiles\library.dir\src\BookFiles.cpp.obj.d -o CMakeFiles\library.dir\src\BookFiles.cpp.obj -c D:\Informatics\Library\src\BookFiles.cpp
+
+CMakeFiles/library.dir/src/BookFiles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/library.dir/src/BookFiles.cpp.i"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Informatics\Library\src\BookFiles.cpp > CMakeFiles\library.dir\src\BookFiles.cpp.i
+
+CMakeFiles/library.dir/src/BookFiles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/library.dir/src/BookFiles.cpp.s"
+	D:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Informatics\Library\src\BookFiles.cpp -o CMakeFiles\library.dir\src\BookFiles.cpp.s
+
 # Object files for target library
 library_OBJECTS = \
 "CMakeFiles/library.dir/main.cpp.obj" \
-"CMakeFiles/library.dir/src/menu.cpp.obj"
+"CMakeFiles/library.dir/src/menu.cpp.obj" \
+"CMakeFiles/library.dir/src/String.cpp.obj" \
+"CMakeFiles/library.dir/src/User.cpp.obj" \
+"CMakeFiles/library.dir/src/CommandLine.cpp.obj" \
+"CMakeFiles/library.dir/src/UserDatabase.cpp.obj" \
+"CMakeFiles/library.dir/src/BookDatabase.cpp.obj" \
+"CMakeFiles/library.dir/src/SearchBooks.cpp.obj" \
+"CMakeFiles/library.dir/src/SortBooks.cpp.obj" \
+"CMakeFiles/library.dir/src/Book.cpp.obj" \
+"CMakeFiles/library.dir/src/UserFiles.cpp.obj" \
+"CMakeFiles/library.dir/src/BookFiles.cpp.obj"
 
 # External object files for target library
 library_EXTERNAL_OBJECTS =
 
 library.exe: CMakeFiles/library.dir/main.cpp.obj
 library.exe: CMakeFiles/library.dir/src/menu.cpp.obj
+library.exe: CMakeFiles/library.dir/src/String.cpp.obj
+library.exe: CMakeFiles/library.dir/src/User.cpp.obj
+library.exe: CMakeFiles/library.dir/src/CommandLine.cpp.obj
+library.exe: CMakeFiles/library.dir/src/UserDatabase.cpp.obj
+library.exe: CMakeFiles/library.dir/src/BookDatabase.cpp.obj
+library.exe: CMakeFiles/library.dir/src/SearchBooks.cpp.obj
+library.exe: CMakeFiles/library.dir/src/SortBooks.cpp.obj
+library.exe: CMakeFiles/library.dir/src/Book.cpp.obj
+library.exe: CMakeFiles/library.dir/src/UserFiles.cpp.obj
+library.exe: CMakeFiles/library.dir/src/BookFiles.cpp.obj
 library.exe: CMakeFiles/library.dir/build.make
 library.exe: CMakeFiles/library.dir/linklibs.rsp
 library.exe: CMakeFiles/library.dir/objects1.rsp
 library.exe: CMakeFiles/library.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable library.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Informatics\Library\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable library.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\library.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

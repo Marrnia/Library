@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named string
+
+# Build rule for target.
+string: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 string
+.PHONY : string
+
+# fast build rule for target.
+string/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/build
+.PHONY : string/fast
+
+#=============================================================================
 # Target rules for targets named library
 
 # Build rule for target.
@@ -141,6 +154,19 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+#=============================================================================
+# Target rules for targets named vector_string
+
+# Build rule for target.
+vector_string: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 vector_string
+.PHONY : vector_string
+
+# fast build rule for target.
+vector_string/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/build
+.PHONY : vector_string/fast
+
 Tests/main.obj: Tests/main.cpp.obj
 .PHONY : Tests/main.obj
 
@@ -165,6 +191,54 @@ Tests/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/Tests/main.cpp.s
 .PHONY : Tests/main.cpp.s
 
+Tests/string.obj: Tests/string.cpp.obj
+.PHONY : Tests/string.obj
+
+# target to build an object file
+Tests/string.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/Tests/string.cpp.obj
+.PHONY : Tests/string.cpp.obj
+
+Tests/string.i: Tests/string.cpp.i
+.PHONY : Tests/string.i
+
+# target to preprocess a source file
+Tests/string.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/Tests/string.cpp.i
+.PHONY : Tests/string.cpp.i
+
+Tests/string.s: Tests/string.cpp.s
+.PHONY : Tests/string.s
+
+# target to generate assembly for a file
+Tests/string.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/Tests/string.cpp.s
+.PHONY : Tests/string.cpp.s
+
+Tests/vector_strings.obj: Tests/vector_strings.cpp.obj
+.PHONY : Tests/vector_strings.obj
+
+# target to build an object file
+Tests/vector_strings.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/Tests/vector_strings.cpp.obj
+.PHONY : Tests/vector_strings.cpp.obj
+
+Tests/vector_strings.i: Tests/vector_strings.cpp.i
+.PHONY : Tests/vector_strings.i
+
+# target to preprocess a source file
+Tests/vector_strings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/Tests/vector_strings.cpp.i
+.PHONY : Tests/vector_strings.cpp.i
+
+Tests/vector_strings.s: Tests/vector_strings.cpp.s
+.PHONY : Tests/vector_strings.s
+
+# target to generate assembly for a file
+Tests/vector_strings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/Tests/vector_strings.cpp.s
+.PHONY : Tests/vector_strings.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -188,6 +262,252 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/Book.obj: src/Book.cpp.obj
+.PHONY : src/Book.obj
+
+# target to build an object file
+src/Book.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/Book.cpp.obj
+.PHONY : src/Book.cpp.obj
+
+src/Book.i: src/Book.cpp.i
+.PHONY : src/Book.i
+
+# target to preprocess a source file
+src/Book.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/Book.cpp.i
+.PHONY : src/Book.cpp.i
+
+src/Book.s: src/Book.cpp.s
+.PHONY : src/Book.s
+
+# target to generate assembly for a file
+src/Book.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/Book.cpp.s
+.PHONY : src/Book.cpp.s
+
+src/BookDatabase.obj: src/BookDatabase.cpp.obj
+.PHONY : src/BookDatabase.obj
+
+# target to build an object file
+src/BookDatabase.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/BookDatabase.cpp.obj
+.PHONY : src/BookDatabase.cpp.obj
+
+src/BookDatabase.i: src/BookDatabase.cpp.i
+.PHONY : src/BookDatabase.i
+
+# target to preprocess a source file
+src/BookDatabase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/BookDatabase.cpp.i
+.PHONY : src/BookDatabase.cpp.i
+
+src/BookDatabase.s: src/BookDatabase.cpp.s
+.PHONY : src/BookDatabase.s
+
+# target to generate assembly for a file
+src/BookDatabase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/BookDatabase.cpp.s
+.PHONY : src/BookDatabase.cpp.s
+
+src/BookFiles.obj: src/BookFiles.cpp.obj
+.PHONY : src/BookFiles.obj
+
+# target to build an object file
+src/BookFiles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/BookFiles.cpp.obj
+.PHONY : src/BookFiles.cpp.obj
+
+src/BookFiles.i: src/BookFiles.cpp.i
+.PHONY : src/BookFiles.i
+
+# target to preprocess a source file
+src/BookFiles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/BookFiles.cpp.i
+.PHONY : src/BookFiles.cpp.i
+
+src/BookFiles.s: src/BookFiles.cpp.s
+.PHONY : src/BookFiles.s
+
+# target to generate assembly for a file
+src/BookFiles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/BookFiles.cpp.s
+.PHONY : src/BookFiles.cpp.s
+
+src/CommandLine.obj: src/CommandLine.cpp.obj
+.PHONY : src/CommandLine.obj
+
+# target to build an object file
+src/CommandLine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/CommandLine.cpp.obj
+.PHONY : src/CommandLine.cpp.obj
+
+src/CommandLine.i: src/CommandLine.cpp.i
+.PHONY : src/CommandLine.i
+
+# target to preprocess a source file
+src/CommandLine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/CommandLine.cpp.i
+.PHONY : src/CommandLine.cpp.i
+
+src/CommandLine.s: src/CommandLine.cpp.s
+.PHONY : src/CommandLine.s
+
+# target to generate assembly for a file
+src/CommandLine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/CommandLine.cpp.s
+.PHONY : src/CommandLine.cpp.s
+
+src/SearchBooks.obj: src/SearchBooks.cpp.obj
+.PHONY : src/SearchBooks.obj
+
+# target to build an object file
+src/SearchBooks.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/SearchBooks.cpp.obj
+.PHONY : src/SearchBooks.cpp.obj
+
+src/SearchBooks.i: src/SearchBooks.cpp.i
+.PHONY : src/SearchBooks.i
+
+# target to preprocess a source file
+src/SearchBooks.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/SearchBooks.cpp.i
+.PHONY : src/SearchBooks.cpp.i
+
+src/SearchBooks.s: src/SearchBooks.cpp.s
+.PHONY : src/SearchBooks.s
+
+# target to generate assembly for a file
+src/SearchBooks.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/SearchBooks.cpp.s
+.PHONY : src/SearchBooks.cpp.s
+
+src/SortBooks.obj: src/SortBooks.cpp.obj
+.PHONY : src/SortBooks.obj
+
+# target to build an object file
+src/SortBooks.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/SortBooks.cpp.obj
+.PHONY : src/SortBooks.cpp.obj
+
+src/SortBooks.i: src/SortBooks.cpp.i
+.PHONY : src/SortBooks.i
+
+# target to preprocess a source file
+src/SortBooks.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/SortBooks.cpp.i
+.PHONY : src/SortBooks.cpp.i
+
+src/SortBooks.s: src/SortBooks.cpp.s
+.PHONY : src/SortBooks.s
+
+# target to generate assembly for a file
+src/SortBooks.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/SortBooks.cpp.s
+.PHONY : src/SortBooks.cpp.s
+
+src/String.obj: src/String.cpp.obj
+.PHONY : src/String.obj
+
+# target to build an object file
+src/String.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/src/String.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/String.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/src/String.cpp.obj
+.PHONY : src/String.cpp.obj
+
+src/String.i: src/String.cpp.i
+.PHONY : src/String.i
+
+# target to preprocess a source file
+src/String.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/src/String.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/String.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/src/String.cpp.i
+.PHONY : src/String.cpp.i
+
+src/String.s: src/String.cpp.s
+.PHONY : src/String.s
+
+# target to generate assembly for a file
+src/String.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\string.dir\build.make CMakeFiles/string.dir/src/String.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/String.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\vector_string.dir\build.make CMakeFiles/vector_string.dir/src/String.cpp.s
+.PHONY : src/String.cpp.s
+
+src/User.obj: src/User.cpp.obj
+.PHONY : src/User.obj
+
+# target to build an object file
+src/User.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/User.cpp.obj
+.PHONY : src/User.cpp.obj
+
+src/User.i: src/User.cpp.i
+.PHONY : src/User.i
+
+# target to preprocess a source file
+src/User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/User.cpp.i
+.PHONY : src/User.cpp.i
+
+src/User.s: src/User.cpp.s
+.PHONY : src/User.s
+
+# target to generate assembly for a file
+src/User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/User.cpp.s
+.PHONY : src/User.cpp.s
+
+src/UserDatabase.obj: src/UserDatabase.cpp.obj
+.PHONY : src/UserDatabase.obj
+
+# target to build an object file
+src/UserDatabase.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/UserDatabase.cpp.obj
+.PHONY : src/UserDatabase.cpp.obj
+
+src/UserDatabase.i: src/UserDatabase.cpp.i
+.PHONY : src/UserDatabase.i
+
+# target to preprocess a source file
+src/UserDatabase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/UserDatabase.cpp.i
+.PHONY : src/UserDatabase.cpp.i
+
+src/UserDatabase.s: src/UserDatabase.cpp.s
+.PHONY : src/UserDatabase.s
+
+# target to generate assembly for a file
+src/UserDatabase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/UserDatabase.cpp.s
+.PHONY : src/UserDatabase.cpp.s
+
+src/UserFiles.obj: src/UserFiles.cpp.obj
+.PHONY : src/UserFiles.obj
+
+# target to build an object file
+src/UserFiles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/UserFiles.cpp.obj
+.PHONY : src/UserFiles.cpp.obj
+
+src/UserFiles.i: src/UserFiles.cpp.i
+.PHONY : src/UserFiles.i
+
+# target to preprocess a source file
+src/UserFiles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/UserFiles.cpp.i
+.PHONY : src/UserFiles.cpp.i
+
+src/UserFiles.s: src/UserFiles.cpp.s
+.PHONY : src/UserFiles.s
+
+# target to generate assembly for a file
+src/UserFiles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\library.dir\build.make CMakeFiles/library.dir/src/UserFiles.cpp.s
+.PHONY : src/UserFiles.cpp.s
 
 src/menu.obj: src/menu.cpp.obj
 .PHONY : src/menu.obj
@@ -222,13 +542,51 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... library
+	@echo ... string
 	@echo ... test
+	@echo ... vector_string
 	@echo ... Tests/main.obj
 	@echo ... Tests/main.i
 	@echo ... Tests/main.s
+	@echo ... Tests/string.obj
+	@echo ... Tests/string.i
+	@echo ... Tests/string.s
+	@echo ... Tests/vector_strings.obj
+	@echo ... Tests/vector_strings.i
+	@echo ... Tests/vector_strings.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Book.obj
+	@echo ... src/Book.i
+	@echo ... src/Book.s
+	@echo ... src/BookDatabase.obj
+	@echo ... src/BookDatabase.i
+	@echo ... src/BookDatabase.s
+	@echo ... src/BookFiles.obj
+	@echo ... src/BookFiles.i
+	@echo ... src/BookFiles.s
+	@echo ... src/CommandLine.obj
+	@echo ... src/CommandLine.i
+	@echo ... src/CommandLine.s
+	@echo ... src/SearchBooks.obj
+	@echo ... src/SearchBooks.i
+	@echo ... src/SearchBooks.s
+	@echo ... src/SortBooks.obj
+	@echo ... src/SortBooks.i
+	@echo ... src/SortBooks.s
+	@echo ... src/String.obj
+	@echo ... src/String.i
+	@echo ... src/String.s
+	@echo ... src/User.obj
+	@echo ... src/User.i
+	@echo ... src/User.s
+	@echo ... src/UserDatabase.obj
+	@echo ... src/UserDatabase.i
+	@echo ... src/UserDatabase.s
+	@echo ... src/UserFiles.obj
+	@echo ... src/UserFiles.i
+	@echo ... src/UserFiles.s
 	@echo ... src/menu.obj
 	@echo ... src/menu.i
 	@echo ... src/menu.s
