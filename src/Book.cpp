@@ -54,23 +54,7 @@ void Book :: setKeywords(const Vector<String>& keywords) {
 }
 
 void Book::setKeyWordsFromString(const String& tags) {
-    String keyword = "";
-    char ch;
-    const char SPACE = ' ';
-    size_t size = tags.length();
-    for (size_t i = 0; i < size; ++i) {
-        ch = tags[i];
-        if (ch == SPACE) {
-            if(keyword.length() > 0){
-            keywords.push_back(keyword);
-            }
-            keyword = "";
-        }
-        keyword += ch;
-    }
-    if (keyword.length() > 0) {
-        keywords.push_back(keyword);
-    }
+    VectorString::splitIntoWords(tags, keywords);
 }
 
 void Book :: setRating(const float& rating) {
@@ -114,11 +98,11 @@ void Book :: save(std::ofstream& file) const {
     file << this->author << '\n';
     file << this->genre << '\n';
     file << this->description << '\n';
+    file << this->year << '\n';
     for(int i = 0; i < this->keywords.getSize();++i) {
         file << this->keywords[i] << " ";
     }
     file << '\n';
-    file << this->year << '\n';
     file << this->rating << '\n';
 }
 

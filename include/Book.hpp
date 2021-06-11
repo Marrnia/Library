@@ -3,6 +3,7 @@
 #include <fstream>
 #include "String.hpp"
 #include "Vector.hpp"
+#include "vector_strings.hpp"
 
 using namespace library;
 

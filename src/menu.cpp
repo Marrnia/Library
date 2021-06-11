@@ -169,10 +169,7 @@ void Menu :: choice() {
         }
         else if (words[0] == "books" && words[1] == "info") {
             State condition = books.viewInfo(words[2].toUnisgned(), logged);
-            if (condition == SUCCESS) {
-
-            }
-            else if (condition == NOTMATCH) {
+            if (condition == NOTMATCH) {
                 std::cout << "There is no such book with that id!\n";
             }
             else if (condition == NOTLOGGED) {

@@ -33,10 +33,6 @@ State BookDatabase :: open(const String &filename, std::ifstream& file) {
     if (!file) {
         return FAIL;
     }
-    /*bool isEmptyFile = file.peek() == std::ifstream::traits_type::eof();
-    if (isEmptyFile) {
-        return EMPTYFILE;
-    }*/
 
     is_open = true;
     String title, author, genre, description, tags;

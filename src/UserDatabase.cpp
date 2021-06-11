@@ -13,16 +13,16 @@ State UserDatabase :: login(bool& logged, bool& admin) {
     char ch;
     char pass[25];
     const char BACKSPACE = 8;
-    const char RETURN = 13;
+    const char ENTER = 13;
     size_t i = 0;
     String username;
     String password;
     std::cout << "Enter username:";
     std::cin >> username;
     std::cout << "Enter password:";
-    while (ch != RETURN) {
+    while (ch != ENTER) {
         ch = getch();
-        if (ch != RETURN && ch != BACKSPACE) {
+        if (ch != ENTER && ch != BACKSPACE) {
             putch('*');
             pass[i] = ch;
             ++i;

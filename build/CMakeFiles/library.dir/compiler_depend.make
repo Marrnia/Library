@@ -312,7 +312,8 @@ CMakeFiles/library.dir/src/Book.cpp.obj: ../src/Book.cpp \
   D:/TDM-GCC-64/x86_64-w64-mingw32/include/conio.h \
   D:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/conio_s.h \
   ../include/Vector.hpp \
-  ../include/User.hpp
+  ../include/User.hpp \
+  ../include/vector_strings.hpp
 
 CMakeFiles/library.dir/src/BookDatabase.cpp.obj: ../src/BookDatabase.cpp \
   ../include/BookDatabase.hpp \
@@ -459,6 +460,7 @@ CMakeFiles/library.dir/src/BookDatabase.cpp.obj: ../src/BookDatabase.cpp \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/fstream.tcc \
   ../include/Book.hpp \
+  ../include/vector_strings.hpp \
   ../include/Database.hpp
 
 CMakeFiles/library.dir/src/BookFiles.cpp.obj: ../src/BookFiles.cpp \
@@ -606,6 +608,7 @@ CMakeFiles/library.dir/src/BookFiles.cpp.obj: ../src/BookFiles.cpp \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/fstream.tcc \
   ../include/Book.hpp \
+  ../include/vector_strings.hpp \
   ../include/Database.hpp
 
 CMakeFiles/library.dir/src/CommandLine.cpp.obj: ../src/CommandLine.cpp \
@@ -914,6 +917,7 @@ CMakeFiles/library.dir/src/SearchBooks.cpp.obj: ../src/SearchBooks.cpp \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/fstream.tcc \
   ../include/Book.hpp \
+  ../include/vector_strings.hpp \
   ../include/Database.hpp
 
 CMakeFiles/library.dir/src/SortBooks.cpp.obj: ../src/SortBooks.cpp \
@@ -1061,6 +1065,7 @@ CMakeFiles/library.dir/src/SortBooks.cpp.obj: ../src/SortBooks.cpp \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/fstream.tcc \
   ../include/Book.hpp \
+  ../include/vector_strings.hpp \
   ../include/Database.hpp
 
 CMakeFiles/library.dir/src/String.cpp.obj: ../src/String.cpp \
@@ -1486,7 +1491,8 @@ CMakeFiles/library.dir/src/UserDatabase.cpp.obj: ../src/UserDatabase.cpp \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/fstream.tcc \
   ../include/Database.hpp \
-  ../include/Book.hpp
+  ../include/Book.hpp \
+  ../include/vector_strings.hpp
 
 CMakeFiles/library.dir/src/UserFiles.cpp.obj: ../src/UserFiles.cpp \
   ../include/UserDatabase.hpp \
@@ -1633,7 +1639,8 @@ CMakeFiles/library.dir/src/UserFiles.cpp.obj: ../src/UserFiles.cpp \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   D:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/fstream.tcc \
   ../include/Database.hpp \
-  ../include/Book.hpp
+  ../include/Book.hpp \
+  ../include/vector_strings.hpp
 
 CMakeFiles/library.dir/src/menu.cpp.obj: ../src/menu.cpp \
   ../include/menu.hpp \

@@ -11,6 +11,12 @@ State BookDatabase :: add(const bool& logged, const bool& admin) {
     String temp;
     unsigned year = 0;
     float rating = 0.0;
+    std::cout << "Title: ";
+    std::cin >> temp;
+    if (temp.length() > 50) {
+        std::cout << "Length of the title is too large!\n";
+        return FAIL;
+    }
     std::cout << "Author: ";
     std::cin >> temp;
     if (temp.length() > 40) {
@@ -18,12 +24,6 @@ State BookDatabase :: add(const bool& logged, const bool& admin) {
         return FAIL;
     }
     book.setAuthor(temp);
-    std::cout << "Title: ";
-    std::cin >> temp;
-    if (temp.length() > 50) {
-        std::cout << "Length of the title is too large!\n";
-        return FAIL;
-    }
     book.setTitle(temp);
     std::cout << "Genre: ";
     std::cin >> temp;
@@ -41,11 +41,15 @@ State BookDatabase :: add(const bool& logged, const bool& admin) {
     book.setDescription(temp);
     std::cout << "Year of publish: ";
     std::cin >> year;
+    std::cin.ignore(100,'\n');
     if (year > 2021) {
         std::cout << "Invalid year!\n";
         return FAIL;
     }
     book.setYear(year);
+    std::cout << "Keywords(with spaces): ";
+    std::cin >> temp;
+    book.setKeyWordsFromString(temp);
     std::cout << "Rating(1-5): ";
     std::cin >> rating;
     std::cin.ignore(100,'\n');
