@@ -99,6 +99,8 @@ namespace library {
         friend bool operator!=(const char& lhs, const String& rhs) {
             return !(lhs == rhs);
         }
+        bool operator<(const String&) const;
+        bool operator>(const String&) const;
         void clear();
         void insert(const char&, const size_t&);
         static void swap(String&, String&);
@@ -107,6 +109,11 @@ namespace library {
         void toUpper() noexcept;
         void removeElement(const size_t&);
         void removeSpaces();
+        
+        unsigned toUnisgned() const;
+        int toInt() const;
+        double toDouble() const;
+        bool toBool() const;
 
         //Search
         int find(const String&);
@@ -115,8 +122,7 @@ namespace library {
         size_t find(const char&, const size_t&, const size_t&) const;
 
         // IO
-        friend std::ostream &operator<<(std::ostream &out, const String &object)
-        {
+        friend std::ostream &operator<<(std::ostream &out, const String &object) {
             if (object.data != nullptr)
                 out << object.data;
             else {
@@ -125,65 +131,21 @@ namespace library {
             return out;
         }
 
-        friend std::istream &operator>>(std::istream &in, String &object)
-        {
-            /*char *buffer = nullptr;
-            try
-            {
+        friend std::istream &operator>>(std::istream &in, String &object) {
+            char *buffer = nullptr;
+            try {
                 buffer = new char[1000];
             }
-            catch(const std::exception& e)
-            {
+            catch(const std::exception& e) {
                 std::cerr << e.what() << '\n';
             }
+            in.getline(buffer, 1000);
             in.clear();
-            in.get(buffer, 1000);
             object = String{buffer};
             delete[] buffer;
-            return in;*/
-
-            char ch;
-            char *buffer;
-            try
-            {
-                buffer = new char[1000];
-            }
-            catch(const std::exception& e)
-            {
-                std::cerr << e.what() << '\n';
-            }
-            
-            const char BACKSPACE = 8;
-            const char RETURN = 13;
-            int i = 0;
-
-            while (ch != RETURN)
-            {
-                if (i == 1000)
-                {
-                    throw("Buffer overflow!");
-                }
-                ch = getch();
-                if (ch != RETURN && ch != BACKSPACE)
-                {
-                    std::cout << ch;
-                    buffer[i] = ch;
-                    ++i;
-                }
-                if (ch == BACKSPACE && i > 0)
-                {
-                    --i;
-                    std::cout << "\b \b";
-                    continue;
-                }
-            }
-            buffer[i] = '\0';
-            object = String{buffer};
-            delete[] buffer;
-            std::cout << '\n';
             return in;
-
         }
 
     };
 }
+

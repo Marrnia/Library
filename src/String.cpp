@@ -242,6 +242,30 @@ bool String :: operator!=(const char& rhs) const {
     return !(*this == rhs);
 }
 
+bool String :: operator>(const String &other) const {
+    for (size_t i = 0; i < size; ++i) {
+        if (data[i] != other[i]) {
+            if (data[i] > other[i])
+                return true;
+            else
+                return false;
+        }
+    }
+    return true;
+}
+
+bool String :: operator<(const String &other) const {
+    for (size_t i = 0; i < size; ++i) {
+        if (data[i] != other[i]) {
+            if (data[i] < other[i])
+                return true;
+            else
+                return false;
+        }
+    }
+    return true;
+}
+
 void String :: clear() {
     erase();
 }
@@ -339,6 +363,42 @@ void String :: removeSpaces() {
     }
 }
 
+unsigned String :: toUnisgned() const{
+    unsigned num = 0;
+    for (size_t i = size - 1, digit = 1; i >= 0; --i, digit *= 10) {
+        num += (data[i] - '0') * digit;
+    }
+    return num;
+}
+
+int String :: toInt() const {
+    int num = 0;
+    for (size_t i = size - 1, digit = 1; i >= 0; --i, digit *= 10) {
+        if (data[i] == '-')
+            return num * -1;
+        num += (data[i] - '0') * digit;
+    }
+    return num;
+}
+
+double String :: toDouble() const {
+    double num = 0.0;
+    for (size_t i = size - 1, digit = 1; i >= 0; --i, digit *= 10) {
+        if (data[i] == '-')
+            return num * -1;
+        num += (data[i] - '0') * digit;
+    }
+
+    return num;
+}
+
+bool String :: toBool() const{
+    if (*this == "true" || *this == "1")
+        return true;
+    else
+        return false;
+}
+
 int String :: find(const String& find) {
     if (find.size > size) {
         return -1;
@@ -374,3 +434,42 @@ int String :: find(const char& find) {
     }
     return -1;
 }
+
+
+
+/*std::istream &operator>>(std::istream &in, String &object) {
+    char ch;
+    char *buffer;
+    try {
+        buffer = new char[1000];
+    }
+    catch(const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
+    
+    const char BACKSPACE = 8;
+    const char RETURN = 13;
+    int i = 0;
+
+    while (ch != RETURN) {
+        if (i == 1000) {
+            throw("Buffer overflow!");
+        }
+        ch = getch();
+        if (ch != RETURN && ch != BACKSPACE) {
+            std::cout << ch;
+            buffer[i] = ch;
+            ++i;
+        }
+        if (ch == BACKSPACE && i > 0) {
+            --i;
+            std::cout << "\b \b";
+            continue;
+        }
+    }
+    buffer[i] = '\0';
+    object = String{buffer};
+    delete[] buffer;
+    std::cout << '\n';
+    return in;
+}*/
