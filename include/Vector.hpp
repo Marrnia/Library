@@ -1,15 +1,8 @@
 #pragma once
 #include <iostream>
 #include <String.hpp>
+#include "User.hpp"
 
-/*TO DO: 
-1) Iterators
-2) Move constructor
-3) Move assignment operator
-4) Allocator
-5) Range constructor
-6) Initializer list constructor
-*/
 
 namespace library {
 	
@@ -67,12 +60,11 @@ namespace library {
 		// comparison
 		bool operator== (const Vector<value_type> &) const;
 		bool operator!= (const Vector<value_type> &) const;
-		bool operator< (const Vector<value_type> &) const;
-		bool operator<= (const Vector<value_type> &) const;
-		bool operator> (const Vector<value_type> &) const;
-		bool operator>= (const Vector<value_type> &) const;
+
+		bool isExist(T&) const;
+		bool isExistName(const T&) const;
 	
-		static void swap(Vector<value_type>&, Vector<value_type>&);
+		void swap(value_type&, value_type&);
 	
 		void print() const;
 	
@@ -394,45 +386,31 @@ namespace library {
 		return false;
 	}
 	
-	/*template <typename T>
-	bool Vector<T> :: operator < (const Vector<value_type> &rhs) const {
-		size_type ub = size < rhs.size ? size : rhs.size;
-		for (size_type i = 0; i < ub; ++i)
-			if (data[i] != rhs.data[i])
-				return data[i] < rhs.data[i];
-		return size < rhs.size;
-	}*/
-	
-	/*template <typename T>
-	bool Vector<T> :: operator <= (const Vector<value_type> &rhs) const {
-		size_type ub = size < rhs.size ? size : rhs.size;
-		for (size_type i = 0; i < ub; ++i)
-			if (data[i] != rhs.data[i])
-				return data[i] < rhs.data[i];
-		return size <= rhs.size;
+
+	template <typename T>
+	bool Vector<T> :: isExist(T& elem) const {
+		for(size_t i = 0; i < this->size; ++i) {
+			if(elem == data[i]) {
+				elem.setAdmin(data[i].getAdmin()); 
+				return true;
+			}
+		}
+		return false;
+	}
+
+	template <typename T>
+	bool Vector<T> :: isExistName(const T& elem) const {
+		for(size_t i = 0; i < this->size; ++i) {
+			if(elem == data[i]) { 
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	template <typename T>
-	bool Vector<T> :: operator > (const Vector<value_type> &rhs) const {
-		size_type ub = size < rhs.size ? size : rhs.size;
-		for (size_type i = 0; i < ub; ++i)
-			if (data[i] != rhs.data[i])
-				return data[i] > rhs.data[i];
-		return size > rhs.size;
-	}
-	
-	template <typename T>
-	bool Vector<T> :: operator >= (const Vector<value_type> &rhs) const {
-		size_type ub = size < rhs.size ? size : rhs.size;
-		for (size_type i = 0; i < ub; ++i)
-			if (data[i] != rhs.data[i])
-				return data[i] > rhs.data[i];
-		return size >= rhs.size;
-	}*/
-	
-	template <typename T>
-	void Vector<T> :: swap (Vector<value_type>& lhs, Vector<value_type>& rhs) {
-		Vector<value_type> temp;
+	void Vector<T> :: swap (value_type& lhs, value_type& rhs) {
+		value_type temp;
 		temp = lhs;
 		lhs = rhs;
 		rhs = temp;
